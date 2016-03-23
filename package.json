@@ -1,0 +1,12 @@
+{
+  "name": "bootstrap-timeline",
+  "version": "1.0.0",
+  "author": "sanex3339@yandex.ru",
+  "license": "ISC",
+  "dependencies": {
+    "gulp"              : "latest",
+    "gulp-less"         : "^3.0.2",
+    "gulp-minify-css"   : "latest"
+  }
+}
+
