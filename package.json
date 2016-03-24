@@ -6,6 +6,7 @@
   "dependencies": {
     "gulp"              : "latest",
     "gulp-less"         : "^3.0.2",
+    "gulp-rename"       : "^1.2.2",
     "gulp-minify-css"   : "latest"
   }
 }
