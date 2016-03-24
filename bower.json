@@ -1,12 +1,12 @@
 {
-  "name": "bootstrap-timeline",
+  "name": "bootstrap-responsive-timeline",
   "description": "Pretty responsive bootstrap timeline",
   "main": "./less/timeline.less",
   "authors": [
     "sanex3339@yandex.ru"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/sanex3339/bootstrap-timeline",
+  "homepage": "https://github.com/sanex3339/bootstrap-responsive-timeline",
   "moduleType": [],
   "ignore": [
     "node_modules",
