@@ -52,7 +52,7 @@
       & > .timeline-point {
         .transform-center;
 
-        left: @timeline-single-column-line-offset;
+        left: @timeline-single-column-line-offset !important;
 
         margin-left: 0;
       }
@@ -202,8 +202,6 @@
 .transform-center() {
   transform: translateX(-50%);
 }
-
-//== clearfix mixin, can be removed
 
 .timeline-row-clearfix() {
   &:before, &:after {

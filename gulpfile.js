@@ -6,8 +6,8 @@ var gulp = require('gulp'),
 gulp.task('default', ['build-less']);
 
 gulp.task('build-less', function () {
-    gulp.src('src/timeline.less')
+    gulp.src('less/timeline.less')
         .pipe(less())
         .pipe(minifyCss())
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('css/'));
 });

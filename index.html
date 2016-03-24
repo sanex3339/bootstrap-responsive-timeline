@@ -5,8 +5,8 @@
     <title>Bootstrap Timeline</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="../dist/timeline.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/timeline.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -203,12 +203,12 @@
                 <h2>Two columns</h2>
                 <ul class="timeline">
                     <li class="timeline-item">
-                        <div class="timeline-point timeline-point-info">
+                        <div class="timeline-point timeline-point-default">
                             <i class="fa fa-circle"></i>
                         </div>
-                        <div class="timeline-event timeline-event-info">
+                        <div class="timeline-event timeline-event-default">
                             <div class="timeline-heading">
-                                <h4>Timeline Event</h4>
+                                <h4>timeline-event timeline-event-default</h4>
                             </div>
                             <div class="timeline-body">
                                 <p>Invitamus me testatur sed quod non dum animae tuae lacrimis ut libertatem deum rogus aegritudinis causet. Dicens hoc contra serpentibus isto.</p>
@@ -220,16 +220,16 @@
                     </li>
 
                     <ol class="timeline-label">
-                        <span class="label label-primary">Long label text</span>
+                        <span class="label label-primary">timeline-label</span>
                     </ol>
 
                     <li class="timeline-item">
-                        <div class="timeline-point timeline-point-danger">
+                        <div class="timeline-point timeline-point-primary">
                             <i class="fa fa-star"></i>
                         </div>
-                        <div class="timeline-event timeline-event-danger">
+                        <div class="timeline-event timeline-event-primary">
                             <div class="timeline-heading">
-                                <h4>Timeline Event</h4>
+                                <h4>timeline-event timeline-event-primary</h4>
                             </div>
                             <div class="timeline-body">
                                 <p>Stranguillione in deinde cepit roseo commendavit patris super color est se sed. Virginis plus plorantes abscederem assignato ipsum ait regem Ardalio nos filiae Hellenicus mihi cum. Theophilo litore in lucem in modo invenit quasi nomen magni ergo est se est Apollonius, habet clementiae venit ad nomine sed dominum depressit filia navem.</p>
@@ -241,12 +241,12 @@
                     </li>
 
                     <li class="timeline-item">
-                        <div class="timeline-point">
+                        <div class="timeline-point timeline-point-info">
                             <i class="fa fa-star"></i>
                         </div>
-                        <div class="timeline-event">
+                        <div class="timeline-event timeline-event-info">
                             <div class="timeline-heading">
-                                <h4>Timeline Event</h4>
+                                <h4>timeline-event timeline-event-info</h4>
                             </div>
                             <div class="timeline-body">
                                 <p>Advenientibus aliorum eam ad per te sed. Facere debetur aut veneris accedens.</p>
@@ -258,12 +258,12 @@
                     </li>
 
                     <li class="timeline-item">
-                        <div class="timeline-point timeline-point-danger">
+                        <div class="timeline-point timeline-point-warning">
                             <i class="fa fa-star"></i>
                         </div>
-                        <div class="timeline-event timeline-event-danger">
+                        <div class="timeline-event timeline-event-warning">
                             <div class="timeline-heading">
-                                <h4>Timeline Event</h4>
+                                <h4>timeline-event timeline-event-warning</h4>
                             </div>
                             <div class="timeline-body">
                                 <p>Stranguillione in deinde cepit roseo commendavit patris super color est se sed. Virginis plus plorantes abscederem assignato ipsum ait regem Ardalio nos filiae Hellenicus mihi cum. Theophilo litore in lucem in modo invenit quasi nomen magni ergo est se est Apollonius, habet clementiae venit ad nomine sed dominum depressit filia navem.</p>
@@ -275,12 +275,12 @@
                     </li>
 
                     <li class="timeline-item">
-                        <div class="timeline-point">
+                        <div class="timeline-point timeline-point-danger">
                             <i class="fa fa-star"></i>
                         </div>
-                        <div class="timeline-event">
+                        <div class="timeline-event timeline-event-danger">
                             <div class="timeline-heading">
-                                <h4>Timeline Event</h4>
+                                <h4>timeline-event timeline-event-danger</h4>
                             </div>
                             <div class="timeline-body">
                                 <p>Advenientibus aliorum eam ad per te sed. Facere debetur aut veneris accedens.</p>
@@ -292,16 +292,16 @@
                     </li>
 
                     <ol class="timeline-label">
-                        <span class="label label-primary">Label</span>
+                        <span class="label label-info">timeline-label with label label-info</span>
                     </ol>
 
-                    <li class="timeline-item">
+                    <li class="timeline-item timeline-item-arrow-sm">
                         <div class="timeline-point timeline-point-primary">
                             <i class="fa fa-star"></i>
                         </div>
                         <div class="timeline-event timeline-event-primary">
                             <div class="timeline-heading">
-                                <h4>Timeline Event</h4>
+                                <h4>timeline-item timeline-item-arrow-sm</h4>
                             </div>
                             <div class="timeline-body">
                                 <p>Volvitur ingreditur id ait mea vero cum autem quod ait Cumque ego illum vero cum unde beata. Commendavi si non dum est in. Dionysiadem tuos ratio puella ut casus, tunc lacrimas effunditis magister cives Tharsis. Puellae addita verbaque' capellam sanctissima quid, apollinem existimas filiam rex cum autem quod tamen adnuente rediens eam est se in. Peracta licet ad nomine Maria non ait in modo compungi mulierem volutpat.</p>
@@ -312,13 +312,12 @@
                         </div>
                     </li>
 
-                    <li class="timeline-item">
-                        <div class="timeline-point timeline-point-warning">
-                            <i class="fa fa-star"></i>
+                    <li class="timeline-item timeline-item-arrow-lg">
+                        <div class="timeline-point timeline-point-blank">
                         </div>
                         <div class="timeline-event timeline-event-warning">
                             <div class="timeline-heading">
-                                <h4>Timeline Event</h4>
+                                <h4>timeline-item timeline-item-arrow-lg timeline-point timeline-point-blank</h4>
                             </div>
                             <div class="timeline-body">
                                 <p>Adfertur guttae sapientiae ducitur est Apollonius ut a a his domino Lycoridem in lucem. Theophile atque bona dei cenam veniebant est cum. Iusto opes mihi Tyrum in modo compungi mulierem ubi augue eiusdem ordo quos vero diam omni catervis famulorum. Bene dictis ut diem finito servis unde.</p>
@@ -330,50 +329,10 @@
                     </li>
 
                     <li class="timeline-item">
-                        <div class="timeline-point timeline-point-success">
-                            <i class="fa fa-star"></i>
-                        </div>
+                        <div class="timeline-point timeline-point-blank"></div>
                         <div class="timeline-event timeline-event-success">
                             <div class="timeline-heading">
-                                <h4>Timeline Event</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Crede respiciens loco dedit beneficio ad suis alteri si puella eius in. Acceptis codicello lenonem in deinde plectrum anni ipsa quod eam est Apollonius.</p>
-                            </div>
-                            <div class="timeline-footer primary">
-                                <p class="text-right">Mar-02-2014</p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <ol class="timeline-label">
-                        <span class="label label-info">Label</span>
-                    </ol>
-
-                    <li class="timeline-item">
-                        <div class="timeline-point">
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="timeline-event">
-                            <div class="timeline-heading">
-                                <h4>Timeline Event</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Crede respiciens loco dedit beneficio ad suis alteri si puella eius in. Acceptis codicello lenonem in deinde plectrum anni ipsa quod eam est Apollonius.</p>
-                            </div>
-                            <div class="timeline-footer primary">
-                                <p class="text-right">Mar-02-2014</p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="timeline-item">
-                        <div class="timeline-point">
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="timeline-event">
-                            <div class="timeline-heading">
-                                <h4>Timeline Event</h4>
+                                <h4>timeline-point timeline-point-blank</h4>
                             </div>
                             <div class="timeline-body">
                                 <p>Crede respiciens loco dedit beneficio ad suis alteri si puella eius in. Acceptis codicello lenonem in deinde plectrum anni ipsa quod eam est Apollonius.</p>
@@ -400,7 +359,7 @@
                         <div class="timeline-event timeline-event-primary">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Panel success</h3>
+                                    <h3 class="panel-title">timeline-event timeline-event-primary with panel panel-default</h3>
                                 </div>
                                 <div class="panel-body">
                                     Panel content
@@ -410,7 +369,7 @@
                     </li>
 
                     <ol class="timeline-label">
-                        <span class="label label-primary">23 февраля</span>
+                        <span class="label label-primary">label</span>
                     </ol>
 
                     <li class="timeline-item timeline-item-arrow-sm">
@@ -420,8 +379,8 @@
                         <div class="timeline-event timeline-event-primary">
                             <table class="table table-striped table-hover">
                                 <tr>
-                                    <th>header</th>
-                                    <th>header</th>
+                                    <th>timeline-event timeline-event-primary</th>
+                                    <th>with table table-stripped table-hover</th>
                                 </tr>
                                 <tr>
                                     <td>cell</td>
@@ -457,7 +416,7 @@
                     </li>
 
                     <ol class="timeline-label">
-                        <span class="label label-primary">22 февраля</span>
+                        <span class="label label-primary">label</span>
                     </ol>
 
                     <li class="timeline-item">
@@ -512,7 +471,7 @@
                     </li>
 
                     <ol class="timeline-label">
-                        <span class="label label-info">2 марта</span>
+                        <span class="label label-info">label</span>
                     </ol>
 
                     <li class="timeline-item">

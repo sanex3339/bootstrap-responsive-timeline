@@ -1,46 +1,33 @@
-@import "mixins/timeline"; // temporary import
+@import "mixins/timeline";
 
 //== variables
-@mobile-breakpoint: 768px;
+@timeline-single-column-breakpoint: 768px;
 
 @timeline-desaturate-percentage: 40%;
 @timeline-lighten-percentage: 20%;
 
-@color-main-bg:   #fff;
+@timeline-color-main-bg:        #fff;
 
-@color-gray:            #555;
-@color-gray-lighter:    #f5f5f5;
-
-@color-default:         #F3F8ED;
-@color-default-darker:  #3F8100;
-
-@color-info:            #F0F8FD;
-@color-info-darker:     #0062A7;
-
-@color-warning:         #FFF9E9;
-@color-warning-darker:  #ac7e00;
-
-@color-danger:          #FFC4BC;
-@color-danger-darker:   #B71500;
-
-@timeline-gray: lighten(
+@timeline-color-gray:           #555;
+@timeline-color-gray-light:   #f5f5f5;
+@timeline-color-gray-lighter: lighten(
         desaturate(@timeline-color-default, @timeline-desaturate-percentage),
         @timeline-lighten-percentage
 );
 
-@timeline-bg-default: @color-main-bg;
-@timeline-bg-primary: @color-gray-lighter;
-@timeline-bg-success: @color-default;
-@timeline-bg-info: @color-info;
-@timeline-bg-warning: @color-warning;
-@timeline-bg-danger: @color-danger;
+@timeline-color-default: @timeline-color-gray;
+@timeline-color-primary: @timeline-color-gray;
+@timeline-color-success: #3F8100;
+@timeline-color-info: #0062A7;
+@timeline-color-warning: #ac7e00;
+@timeline-color-danger: #B71500;
 
-@timeline-color-default: @color-gray;
-@timeline-color-primary: @color-gray;
-@timeline-color-success: @color-default-darker;
-@timeline-color-info: @color-info-darker;
-@timeline-color-warning: @color-warning-darker;
-@timeline-color-danger: @color-danger-darker;
+@timeline-bg-default: @timeline-color-main-bg;
+@timeline-bg-primary: @timeline-color-gray-light;
+@timeline-bg-success: #F3F8ED;
+@timeline-bg-info: #F0F8FD;
+@timeline-bg-warning: #FFF9E9;
+@timeline-bg-danger: #FFC4BC;
 
 @timeline-color-desaturated-default: lighten(
         desaturate(@timeline-color-default, @timeline-desaturate-percentage),
@@ -71,7 +58,7 @@
 @timeline-container-padding-horizontal: 0;
 
 @timeline-line-width: 2px;
-@timeline-line-background: @timeline-gray;
+@timeline-line-background: @timeline-color-gray-lighter;
 
 @timeline-single-column-line-offset: 42px;
 
@@ -85,7 +72,7 @@
 @timeline-item-arrow-md-offset-top: 10px;
 @timeline-item-arrow-md-width: 15px;
 @timeline-item-arrow-lg-offset-top: 10px;
-@timeline-item-arrow-lg-width: 20px;
+@timeline-item-arrow-lg-width: 18px;
 
 @timeline-point-border-radius: 2px;
 
@@ -144,7 +131,7 @@
   }
 
   &.timeline-single-column {
-    .timeline-single-column(@mobile-breakpoint);
+    .timeline-single-column(@timeline-single-column-breakpoint);
   }
 
   & .timeline-item {
@@ -163,6 +150,10 @@
 
       & > .timeline-point {
         left: -@timeline-point-width;
+
+        &.timeline-point-blank {
+          left: -@timeline-point-blank-width;
+        }
       }
     }
 
@@ -366,7 +357,7 @@
   }
 }
 
-@media (max-width: @mobile-breakpoint) {
+@media (max-width: @timeline-single-column-breakpoint) {
   .timeline {
     .timeline-single-column;
   }
