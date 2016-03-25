@@ -5,7 +5,7 @@
     padding-left: @padding-left-odd;
     padding-right: @padding-right-odd;
 
-    &:nth-of-type(even) {
+    &.timeline-item-right, &:nth-of-type(even):not(.timeline-item-left) {
       padding-left: @padding-left-even;
       padding-right: @padding-right-even;
     }
@@ -71,7 +71,7 @@
 }
 
 .timeline-item-variant(@top-offset, @arrow-width) {
-  &:nth-of-type(even) {
+  &.timeline-item-right, &:nth-of-type(even):not(.timeline-item-left) {
     & > .timeline-event {
       .timeline-item-right-side-position(@arrow-width);
     }

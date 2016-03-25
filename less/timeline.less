@@ -144,7 +144,11 @@
       margin-top: @timeline-second-item-margin-top;
     }
 
-    &:nth-of-type(even) {
+    &.timeline-item-left, &.timeline-item-right {
+      clear: both !important;
+    }
+
+    &.timeline-item-right, &:nth-of-type(even):not(.timeline-item-left) {
       float: right;
       clear: right;
 
