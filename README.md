@@ -10,10 +10,10 @@ bower install bootstrap-responsive-timeline --save
 
 Then import `timeline/timeline.less` file from `bower` vendor directory to your `less` file.
 
-###Its important to use `<li>` tags for `timeline-item` and `<ol>` tags for `timeline-label`!
-
 ##Markup
-Simple markup
+Simple markup:
+####Notice! It's important to use `<li>` tags for `timeline-item` and `<ol>` tags for `timeline-label`!
+
 ```html
 <ul class="timeline">
 	<li class="timeline-item">
