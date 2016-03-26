@@ -39,7 +39,7 @@ Simple markup:
 </div>
 ```
 
-You can force apply single column mode by adding `timeline-single-column` class to `<ul class="timeline">`.
+You can force apply single column mode by adding `timeline-single-column` class to `<div class="timeline">`.
 
 ```html
 <div class="timeline timeline-single-column">
@@ -144,7 +144,7 @@ You can insert `table` or `panel` components inside `timeline-event` element.
 </div>
 ```
 
-You can apply labels to timeline by adding `<ol>` tags with `timeline-label` class:
+You can apply labels to timeline by adding `<span>` tags with `timeline-label` class:
 
 ```html
 <span class="timeline-label">
