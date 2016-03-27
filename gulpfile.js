@@ -2,12 +2,14 @@ var gulp = require('gulp'),
     less = require('gulp-less'),
     rename = require('gulp-rename'),
     minifyCss = require('gulp-minify-css'),
+    lessToScss = require('gulp-less-to-scss'),
     sass = require('gulp-sass');
 
 
 gulp.task('default', ['build-less-min', 'build-less']);
 gulp.task('less', ['build-less-min', 'build-less']);
 gulp.task('sass', ['build-sass-min', 'build-sass']);
+gulp.task('scss', ['build-scss-min', 'build-scss']);
 
 gulp.task('build-less-min', function () {
     gulp.src('less/timeline.less')
@@ -33,6 +35,26 @@ gulp.task('build-sass-min', function () {
 
 gulp.task('build-sass', function () {
     gulp.src('sass/timeline.sass')
+        .pipe(sass({outputStyle: 'expanded'}))
+        .pipe(gulp.dest('css/'));
+});
+
+gulp.task('less-to-scss', function () {
+    gulp.src('less/**/**.less')
+        .pipe(lessToScss())
+        .pipe(gulp.dest('scss'));
+});
+
+gulp.task('build-scss-min', function () {
+    gulp.src('scss/timeline.scss')
+        .pipe(sass())
+        .pipe(minifyCss())
+        .pipe(rename('timeline.min.css'))
+        .pipe(gulp.dest('css/'));
+});
+
+gulp.task('build-scss', function () {
+    gulp.src('scss/timeline.scss')
         .pipe(sass({outputStyle: 'expanded'}))
         .pipe(gulp.dest('css/'));
 });

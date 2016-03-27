@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "author": "sanex3339@yandex.ru",
   "license": "ISC",
+  "devDependencies": {
+    "gulp-less-to-scss" : "0.0.4"
+  },
   "dependencies": {
     "gulp"              : "latest",
     "gulp-less"         : "^3.0.2",
