@@ -70,6 +70,12 @@
   }
 }
 
+@mixin timeline-line-variant($border-style) {
+  &:before {
+    border-right-style: $border-style;
+  }
+}
+
 @mixin timeline-item-variant($top-offset, $arrow-width) {
   &.timeline-item-right, &:nth-of-type(even):not(.timeline-item-left) {
     & > .timeline-event {

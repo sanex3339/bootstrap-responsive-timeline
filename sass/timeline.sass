@@ -104,16 +104,13 @@ $timeline-item-inner-padding-horizontal: 10px
     +timeline-single-column($timeline-single-column-breakpoint)
 
   &.timeline-line-solid
-    &:before
-      border-right-style: solid
+    +timeline-line-variant(solid)
 
   &.timeline-line-dotted
-    &:before
-      border-right-style: dotted
+    +timeline-line-variant(dotted)
 
   &.timeline-line-dashed
-    &:before
-      border-right-style: dashed
+    +timeline-line-variant(dashed)
 
   & .timeline-item
     @extend .timeline-item-arrow-md

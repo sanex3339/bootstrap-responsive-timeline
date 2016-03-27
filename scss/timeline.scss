@@ -130,21 +130,15 @@ $timeline-item-inner-padding-horizontal: 10px;
   }
 
   &.timeline-line-solid {
-    &:before {
-      border-right-style: solid;
-    }
+    @include timeline-line-variant(solid);
   }
 
   &.timeline-line-dotted {
-    &:before {
-      border-right-style: dotted;
-    }
+    @include timeline-line-variant(dotted);
   }
 
   &.timeline-line-dashed {
-    &:before {
-      border-right-style: dashed;
-    }
+    @include timeline-line-variant(dashed);
   }
 
   & .timeline-item {
