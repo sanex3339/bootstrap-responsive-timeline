@@ -74,7 +74,7 @@
 @timeline-item-arrow-lg-offset-top: 10px;
 @timeline-item-arrow-lg-width: 18px;
 
-@timeline-point-border-radius: 2px;
+@timeline-point-border-width: 2px;
 
 @timeline-point-width: 24px;
 @timeline-point-height: @timeline-point-width;
@@ -94,7 +94,7 @@
 //== main styles
 
 .timeline {
-  .timeline-responsive;
+  .timeline-responsive-variant(@timeline-item-width-offset, 0, 0, @timeline-item-width-offset);
   .timeline-line-solid;
   .timeline-row-clearfix;
 
@@ -122,10 +122,6 @@
     border-right-width: @timeline-line-width;
     border-right-style: solid;
     border-right-color: @timeline-line-color;
-  }
-
-  &.timeline-responsive {
-    .timeline-responsive-variant(@timeline-item-width-offset, 0, 0, @timeline-item-width-offset);
   }
 
   &.timeline-single-column {
@@ -296,11 +292,11 @@
       position: absolute;
       z-index: 100;
 
-      border-width: @timeline-point-border-radius;
+      border-width: @timeline-point-border-width;
       border-style: solid;
       border-radius: 100%;
 
-      line-height: @timeline-point-height - (@timeline-point-border-radius * 2);
+      line-height: @timeline-point-height - (@timeline-point-border-width * 2);
       text-align: center;
 
       &.timeline-point-blank {

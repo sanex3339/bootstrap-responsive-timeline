@@ -18,7 +18,7 @@
 
 .timeline-single-column(@max-width: 100%) {
   &.timeline {
-    .timeline-responsive;
+    .timeline-responsive-variant(@timeline-item-width-offset-single-column, 0, @timeline-item-width-offset-single-column, 0);
 
     width: 100%;
     max-width: @max-width;
@@ -29,10 +29,6 @@
       width: 0;
 
       margin-left: -(@timeline-line-width / 2);
-    }
-
-    &.timeline-responsive {
-      .timeline-responsive-variant(@timeline-item-width-offset-single-column, 0, @timeline-item-width-offset-single-column, 0);
     }
 
     & .timeline-item {
