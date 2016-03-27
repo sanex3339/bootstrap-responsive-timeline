@@ -58,7 +58,7 @@
 @timeline-container-padding-horizontal: 0;
 
 @timeline-line-width: 2px;
-@timeline-line-background: @timeline-color-gray-lighter;
+@timeline-line-color: @timeline-color-gray-lighter;
 
 @timeline-single-column-line-offset: 42px;
 
@@ -95,6 +95,7 @@
 
 .timeline {
   .timeline-responsive;
+  .timeline-line-solid;
   .timeline-row-clearfix;
 
   position: relative;
@@ -110,28 +111,43 @@
     position: absolute;
 
     top: 0;
+    left: 0;
     bottom: 0;
-    left: 50%;
 
-    width: @timeline-line-width;
+    width: 50%;
     height: 100% !important;
 
-    margin-left: -(@timeline-line-width / 2);
+    margin-left: @timeline-line-width / 2;
 
-    background: @timeline-line-background;
+    border-right-width: @timeline-line-width;
+    border-right-style: solid;
+    border-right-color: @timeline-line-color;
   }
 
   &.timeline-responsive {
-    .timeline-responsive-variant(
-            @timeline-item-width-offset,
-            0,
-            0,
-            @timeline-item-width-offset
-    );
+    .timeline-responsive-variant(@timeline-item-width-offset, 0, 0, @timeline-item-width-offset);
   }
 
   &.timeline-single-column {
     .timeline-single-column(@timeline-single-column-breakpoint);
+  }
+
+  &.timeline-line-solid {
+    &:before {
+      border-right-style: solid;
+    }
+  }
+
+  &.timeline-line-dotted {
+    &:before {
+      border-right-style: dotted;
+    }
+  }
+
+  &.timeline-line-dashed {
+    &:before {
+      border-right-style: dashed;
+    }
   }
 
   & .timeline-item {

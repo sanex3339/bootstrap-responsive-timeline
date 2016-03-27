@@ -73,6 +73,8 @@ You can force apply single column mode by adding `timeline-single-column` class 
 </div>
 ```
 
+You can set timeline line style by adding to `.timeline` element these classes: `.timeline-line-solid` (default), `.timeline-line-dotted` or `.timeline-line-dashed`
+
 You can force set position of `timeline-item` element by adding `timeline-item-left` or `timeline-item-right` classes.
 
 ```html
@@ -87,11 +89,11 @@ You can force set position of `timeline-item` element by adding `timeline-item-l
 </div>
 ```
 
-You can set size of `timeline-item` arrow by adding one of these classes to `timeline-item` element: `timeline-item-arrow-sm`, `timeline-item-arrow-md`, `timeline-item-arrow-lg`.
+You can set size of `timeline-item` arrow by adding one of these classes to `timeline-item` element: `timeline-item-arrow-sm`, `timeline-item-arrow-md` (default), `timeline-item-arrow-lg`.
 
 You can apply one of five color schemes to `timeline-event` elements:
 
-* `timeline-event-default`
+* `timeline-event-default` (default)
 * `timeline-event-primary`
 * `timeline-event-info`
 * `timeline-event-warning`
@@ -99,7 +101,7 @@ You can apply one of five color schemes to `timeline-event` elements:
 
 And/or to `timeline-point` elements:
 
-* `timeline-point-default`
+* `timeline-point-default` (default)
 * `timeline-point-primary`
 * `timeline-point-info`
 * `timeline-point-warning`
