@@ -73,7 +73,7 @@ You can force apply single column mode by adding `timeline-single-column` class 
 </div>
 ```
 
-You can set timeline line style by adding to `.timeline` element these classes: `.timeline-line-solid` (default), `.timeline-line-dotted` or `.timeline-line-dashed`
+You can set timeline line style by adding to `timeline` element these classes: `timeline-line-solid` (default), `timeline-line-dotted` or `timeline-line-dashed`
 
 You can force set position of `timeline-item` element by adding `timeline-item-left` or `timeline-item-right` classes.
 
