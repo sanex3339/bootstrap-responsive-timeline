@@ -104,7 +104,7 @@
   border-right-style: dotted;
 }
 .timeline.timeline-line-dashed:before {
-  border-right-style: dotted;
+  border-right-style: dashed;
 }
 .timeline .timeline-item {
   position: relative;
