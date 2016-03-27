@@ -14,7 +14,6 @@ Then import `timeline/timeline.less` file from `bower` vendor directory to your 
 For building `.css` files from `.less` or `.sass` sources you must install npm dependencies:
 ```
 sudo npm install
-
 ```
 
 After that you can build `.css` files by these commands:
