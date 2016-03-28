@@ -45,6 +45,10 @@
         margin-top: 0;
       }
 
+      &.timeline-item-left, &.timeline-item-right {
+        @include timeline-item-start-margins;
+      }
+
       & > .timeline-event {
         @include timeline-item-right-side-position($timeline-item-arrow-md-width);
       }
@@ -59,13 +63,10 @@
     }
 
     & .timeline-label {
+      @include timeline-item-start-margins;
       @include transform-center;
 
       margin: 0 0 $timeline-item-margin-bottom $timeline-single-column-line-offset;
-
-      & + .timeline-item + .timeline-item {
-        margin-top: 0;
-      }
     }
   }
 }
@@ -203,6 +204,16 @@
 @mixin timeline-item-arrow-color-variant($color) {
   border-left-color: $color;
   border-right-color: $color;
+}
+
+@mixin timeline-item-start-margins($first-item-margin: 0, $second-item-margin: 0) {
+  & + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) {
+    margin-top: $first-item-margin;
+
+    & + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) {
+      margin-top: $second-item-margin;
+    }
+  }
 }
 
 @mixin transform-center() {

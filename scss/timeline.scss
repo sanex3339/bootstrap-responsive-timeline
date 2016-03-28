@@ -156,14 +156,12 @@ $timeline-item-inner-padding-horizontal: 10px;
     }
 
     &.timeline-item-left, &.timeline-item-right {
+      @include timeline-item-start-margins(0, $timeline-second-item-margin-top);
+
       clear: both !important;
 
       & + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) {
         clear: both;
-
-        & + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) {
-          margin-top: $timeline-second-item-margin-top;
-        }
       }
     }
 
@@ -339,6 +337,7 @@ $timeline-item-inner-padding-horizontal: 10px;
 
   & .timeline-label {
     @include timeline-element;
+    @include timeline-item-start-margins(0, $timeline-second-item-margin-top);
 
     top: 1px;
 
@@ -349,14 +348,6 @@ $timeline-item-inner-padding-horizontal: 10px;
     padding: 0;
 
     text-align: center;
-
-    & + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) {
-      margin-top: 0;
-
-      & + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) {
-        margin-top: $timeline-second-item-margin-top;
-      }
-    }
 
     & .label-default {
       @include timeline-label-variant($timeline-color-desaturated-default);
