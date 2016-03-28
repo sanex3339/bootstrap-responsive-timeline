@@ -1,13 +1,9 @@
 @function mutate-colors($colors, $mutator) {
-  $desaturated-colors: ();
+  $mutated-colors: ();
 
   @each $status, $color in $colors {
-    $desaturated-colors: map-set(
-                    $desaturated-colors,
-                    $status,
-                    call($mutator, $color)
-    );
+    $mutated-colors: map-set($mutated-colors, $status, call($mutator, $color));
   }
 
-  @return $desaturated-colors;
+  @return $mutated-colors;
 }
