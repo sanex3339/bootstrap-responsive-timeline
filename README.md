@@ -11,7 +11,7 @@ bower install bootstrap-responsive-timeline --save
 Then import `timeline/timeline.less` file from `bower` vendor directory to your `less` file.
 
 ##Building
-For building `.css` files from `.less`, `.sass` or `.scss` sources you must install npm dependencies:
+For building `.css` files from `.less` or `.scss` sources you must install npm dependencies:
 ```
 sudo npm install
 ```
@@ -22,12 +22,6 @@ After that you can build `.css` files by these commands:
 
 ```
 gulp less
-```
-
-####For SASS
-
-```
-gulp sass
 ```
 
 ####For SCSS
