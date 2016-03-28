@@ -106,6 +106,9 @@
 .timeline.timeline-line-dashed:before {
   border-right-style: dashed;
 }
+.timeline.timeline-line-hidden:before {
+  border-right-style: none;
+}
 .timeline .timeline-item {
   position: relative;
   float: left;
@@ -190,6 +193,14 @@
 .timeline .timeline-item.timeline-item-left,
 .timeline .timeline-item.timeline-item-right {
   clear: both !important;
+}
+.timeline .timeline-item.timeline-item-left + .timeline-item:not(.timeline-item-left):not(.timeline-item-right),
+.timeline .timeline-item.timeline-item-right + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) {
+  clear: both;
+}
+.timeline .timeline-item.timeline-item-left + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) + .timeline-item:not(.timeline-item-left):not(.timeline-item-right),
+.timeline .timeline-item.timeline-item-right + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) {
+  margin-top: 40px;
 }
 .timeline .timeline-item.timeline-item-right,
 .timeline .timeline-item:nth-of-type(even):not(.timeline-item-left) {
@@ -611,10 +622,10 @@
 .timeline .timeline-label:last-child {
   margin-bottom: 0 !important;
 }
-.timeline .timeline-label + .timeline-item {
+.timeline .timeline-label + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) {
   margin-top: 0;
 }
-.timeline .timeline-label + .timeline-item + .timeline-item {
+.timeline .timeline-label + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) {
   margin-top: 40px;
 }
 .timeline .timeline-label .label-default {

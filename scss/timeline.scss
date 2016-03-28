@@ -141,6 +141,10 @@ $timeline-item-inner-padding-horizontal: 10px;
     @include timeline-line-variant(dashed);
   }
 
+  &.timeline-line-hidden {
+    @include timeline-line-variant(none);
+  }
+
   & .timeline-item {
     @extend .timeline-item-arrow-md;
     @include timeline-element;
@@ -153,6 +157,14 @@ $timeline-item-inner-padding-horizontal: 10px;
 
     &.timeline-item-left, &.timeline-item-right {
       clear: both !important;
+
+      & + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) {
+        clear: both;
+
+        & + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) {
+          margin-top: $timeline-second-item-margin-top;
+        }
+      }
     }
 
     &.timeline-item-right, &:nth-of-type(even):not(.timeline-item-left) {
@@ -338,10 +350,10 @@ $timeline-item-inner-padding-horizontal: 10px;
 
     text-align: center;
 
-    & + .timeline-item {
+    & + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) {
       margin-top: 0;
 
-      & + .timeline-item {
+      & + .timeline-item:not(.timeline-item-left):not(.timeline-item-right) {
         margin-top: $timeline-second-item-margin-top;
       }
     }
