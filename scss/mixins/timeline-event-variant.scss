@@ -1,0 +1,20 @@
+@import "timeline-item-arrow-color-variant";
+
+@mixin timeline-event-variant($background-color, $border-color, $color) {
+  background: $background-color;
+  border: 1px solid $border-color;
+
+  color: $color;
+
+  &:before {
+    @include timeline-item-arrow-color-variant($border-color);
+  }
+
+  &:after {
+    @include timeline-item-arrow-color-variant($background-color);
+  }
+
+  & * {
+    color: inherit;
+  }
+}
