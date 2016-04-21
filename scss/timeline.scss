@@ -208,6 +208,12 @@
   }
 }
 
+@media all and (orientation: portrait) {
+  .timeline {
+    @include timeline-single-column;
+  }
+}
+
 @media (max-width: $timeline-single-column-breakpoint) {
   .timeline {
     @include timeline-single-column;
